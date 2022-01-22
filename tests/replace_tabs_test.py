@@ -1,4 +1,4 @@
-from hooks.replace_tabs import main
+from pre_commit_text.replace_tabs import main
 
 
 def test_unchanged_without_match(tmp_path):

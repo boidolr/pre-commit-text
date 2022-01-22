@@ -12,6 +12,7 @@ def _replace_tabs(filename: str, tabsize: int) -> int:
 
     lines = list(map(methodcaller("replace", b"\t", b" " * tabsize), content))
     if lines != content:
+        print(f"fixed {filename}")
         with open(filename, "wb") as fh:
             fh.writelines(lines)
         return 1
@@ -21,13 +22,13 @@ def _replace_tabs(filename: str, tabsize: int) -> int:
 
 def main(argv: Optional[Sequence[str]] = None) -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("filenames", nargs="*", help="File names to replace tabs in")
+    parser.add_argument("filenames", nargs="*", help="Files to replace tabs in")
     parser.add_argument(
         "-t",
         "--tabsize",
         default=4,
         type=int,
-        help="Spaces to replace tabs with (default: %(default)s",
+        help="Spaces to replace tabs with (default: %(default)s)",
     )
     args = parser.parse_args(argv)
 

@@ -1,3 +1,10 @@
+- id: pretty-format-yaml
+  name: Format yaml
+  description: Format yaml files.
+  language: python
+  entry: format-yaml
+  types: [yaml]
+
 - id: search-replace
   name: Search and replace patterns
   description: Search and replace given patterns.

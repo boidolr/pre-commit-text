@@ -1,4 +1,4 @@
-from hooks.search_replace import main
+from pre_commit_text.search_replace import main
 
 
 def test_unchanged_without_match(tmpdir):

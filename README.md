@@ -10,6 +10,7 @@ Add this to your `.pre-commit-config.yaml`:
     -   repo: https://github.com/boidolr/pre-commit-text
         rev: v1.0.0  # Use the ref you want to point at
         hooks:
+        -   id: pretty-format-yaml
         -   id: replace-tabs
         # -   id: ...
 ```
@@ -17,6 +18,7 @@ For an extended example see [`.pre-commit-config.yaml`](.pre-commit-config.yaml)
 
 ## Available hooks
 
+- **`pretty-format-yaml`**: Format yaml files.
 - **`properties-whitespace`**: Remove whitespace around equal signs in property files.
   Implemented using the `search-replace` hook.
 - **`replace-tabs`**: Replace tabs in files.
