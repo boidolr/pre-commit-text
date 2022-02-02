@@ -1,30 +1,30 @@
-- id: pretty-format-yaml
-  name: format yaml
-  description: Format yaml files.
-  language: python
-  entry: format-yaml
-  types: [yaml]
+  - id: pretty-format-yaml
+    name: format yaml
+    description: Format yaml files.
+    language: python
+    entry: format-yaml
+    types: [yaml]
 
-- id: search-replace
-  name: search and replace patterns
-  description: Search and replace given patterns.
-  language: python
-  entry: search-replace
-  exclude_types: [binary]
+  - id: search-replace
+    name: search and replace patterns
+    description: Search and replace given patterns.
+    language: python
+    entry: search-replace
+    exclude_types: [binary]
 
-- id: replace-tabs
-  name: replace tabs with spaces
-  description: Replace tabs with spaces in files.
-  language: python
-  entry: replace-tabs
-  exclude_types: [binary]
+  - id: replace-tabs
+    name: replace tabs with spaces
+    description: Replace tabs with spaces in files.
+    language: python
+    entry: replace-tabs
+    exclude_types: [binary]
 
-- id: properties-whitespace
-  name: remove whitespace in property files
-  description: Remove whitespace around '=' in property files.
-  language: python
-  entry: search-replace
-  args:
-    - '--search="^([^=\s]+)\s*=\s*"'
-    - '--replacement="\1="'
-  types: [java-properties]
+  - id: properties-whitespace
+    name: remove whitespace in property files
+    description: Remove whitespace around '=' in property files.
+    language: python
+    entry: search-replace
+    args:
+      - '--search="^([^=\s]+)\s*=\s*"'
+      - '--replacement="\1="'
+    types: [java-properties]

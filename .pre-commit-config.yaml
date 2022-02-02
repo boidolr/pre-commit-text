@@ -8,19 +8,19 @@
 # pre-commit autoupdate
 ---
 repos:
-  # - repo: https://github.com/boidolr/pre-commit-text
-  #   rev: v1.0.0
-  #   hooks:
-  #     - id: replace-tabs
-  #       exclude: Makefile
-  #     - id: pretty-format-yaml
-  #       args: [--preserve-quotes]
-  #     - id: properties-whitespace
-  #     - id: search-replace
-  #       args:
-  #         - '--search="^([^=\s]+)\s*=\s*"'
-  #         - '--replacement="\1="'
-  #       exclude: Makefile
+  - repo: https://github.com/boidolr/pre-commit-text
+    rev: v1.0.0
+    hooks:
+      - id: replace-tabs
+        exclude: Makefile
+      - id: pretty-format-yaml
+        args: [--preserve-quotes]
+      - id: properties-whitespace
+      - id: search-replace
+        args:
+          - '--search="^([^=\s]+)\s*=\s*"'
+          - '--replacement="\1="'
+        exclude: Makefile
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.1.0
