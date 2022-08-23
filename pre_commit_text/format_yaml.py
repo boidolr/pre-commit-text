@@ -36,9 +36,7 @@ def _format_yaml(yaml: YAML, filename: str) -> int:
     processed_docs = list(filter(None, map(partial(_format_yaml_doc, yaml), docs)))
 
     doc_separator = "---\n"
-    use_separator_before_docs = len(processed_docs) > 1 or (
-        len(head) > 0 and content.startswith("---")
-    )
+    use_separator_before_docs = len(processed_docs) > 1 or (len(head) > 0 and content.startswith("---"))
     prefix = doc_separator if use_separator_before_docs else ""
     processed_content = prefix + doc_separator.join(processed_docs)
 

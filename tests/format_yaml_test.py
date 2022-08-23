@@ -6,10 +6,7 @@ def test_format_yaml_empty_comment(tmp_path):
     path.write_text("## empty yaml file header\n# comments need to be kept\n---\n")
 
     assert main((str(path),)) == 0
-    assert (
-        path.read_text("utf-8")
-        == "## empty yaml file header\n# comments need to be kept\n---\n"
-    )
+    assert path.read_text("utf-8") == "## empty yaml file header\n# comments need to be kept\n---\n"
 
 
 def test_format_yaml_single_document(tmp_path):
@@ -62,22 +59,15 @@ def test_format_yaml_text_file(tmp_path):
 
 def test_format_yaml_multi_document_comment(tmp_path):
     path = tmp_path / "file"
-    path.write_text(
-        "## empty yaml file header\n# comments need to be kept\n---\nfoo:  bar"
-    )
+    path.write_text("## empty yaml file header\n# comments need to be kept\n---\nfoo:  bar")
 
     assert main((str(path),)) == 1
-    assert (
-        path.read_text("utf-8")
-        == "## empty yaml file header\n# comments need to be kept\n---\nfoo: bar\n"
-    )
+    assert path.read_text("utf-8") == "## empty yaml file header\n# comments need to be kept\n---\nfoo: bar\n"
 
 
 def test_format_yaml_multi_document_separates_comments(tmp_path):
     path = tmp_path / "file"
-    path.write_text(
-        "## empty yaml file header\n# comments need to be kept\nfoo:  bar\n---\nbaz: qux\n"
-    )
+    path.write_text("## empty yaml file header\n# comments need to be kept\nfoo:  bar\n---\nbaz: qux\n")
 
     assert main((str(path),)) == 1
     assert (

@@ -30,12 +30,8 @@ def _search_replace(filename: str, pattern: Pattern[bytes], replacement: bytes) 
 def main(argv: Optional[Sequence[str]] = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("filenames", nargs="*", help="Files to search")
-    parser.add_argument(
-        "-s", "--search", dest="pattern", help="Regular expression to use for search"
-    )
-    parser.add_argument(
-        "-r", "--replacement", help="Replacement for successful matches"
-    )
+    parser.add_argument("-s", "--search", dest="pattern", help="Regular expression to use for search")
+    parser.add_argument("-r", "--replacement", help="Replacement for successful matches")
     args = parser.parse_args(argv)
 
     ret = 0
