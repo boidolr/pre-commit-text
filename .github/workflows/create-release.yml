@@ -6,13 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GIT_USER: github-actions
+    if: |
+      startsWith(github.ref, 'refs/tags/v') &&
+      github.actor == 'boidolr'
 
     steps:
       - name: Create release for tag
         uses: boidolr/actions/create-release@main
-        if: |
-          startsWith(github.ref, 'refs/tags/v') &&
-          github.actor == 'boidolr'
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           tag-name: "${{ github.ref }}"
