@@ -1,7 +1,7 @@
 pre-commit-text [![tag](https://img.shields.io/github/v/tag/boidolr/pre-commit-text?sort=semver)](https://github.com/boidolr/pre-commit-text/tags) [![Build](https://github.com/boidolr/pre-commit-text/actions/workflows/continous-integration.yml/badge.svg)](https://github.com/boidolr/pre-commit-text/actions/workflows/continous-integration.yml) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 ================
 
-A collection of git hooks for use with the [pre-commit](https://github.com/pre-commit/pre-commit) framework. For details see the list of available hooks below.
+Git hooks to modify (text) files for use with the [pre-commit](https://github.com/pre-commit/pre-commit) framework. For details see the list of available hooks below.
 
 ## Using pre-commit-text with pre-commit
 
