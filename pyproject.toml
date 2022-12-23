@@ -49,7 +49,7 @@ version = {attr = "pre_commit_text.VERSION"}
 packages = ["pre_commit_text"]
 
 [tool.black]
-target-version = ['py38']
+target-version = ["py38"]
 line-length = 120
 
 [tool.mypy]
