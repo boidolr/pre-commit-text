@@ -64,13 +64,13 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         "-o",
         "--offset",
         type=int,
-        help="Spaces to offset with (default: same as default)",
+        help="Spaces to offset with (default: same as mapping)",
     )
     parser.add_argument(
         "-s",
         "--sequence",
         type=int,
-        help="Spaces to sequence with (default: default + 2)",
+        help="Spaces to sequence with (default: mapping + 2)",
     )
     parser.add_argument(
         "--preserve-quotes",
