@@ -27,6 +27,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "black",
+    "flake8",
     "pre-commit",
     "tox",
     "tox-pyenv",
