@@ -2,9 +2,9 @@
 import argparse
 import re
 import sys
+from collections.abc import Sequence
+from re import Pattern
 from typing import Optional
-from typing import Pattern
-from typing import Sequence
 
 
 def _search_replace(filename: str, pattern: Pattern[bytes], replacement: bytes) -> int:

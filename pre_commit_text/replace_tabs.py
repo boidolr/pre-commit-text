@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 import argparse
 import sys
+from collections.abc import Sequence
 from operator import methodcaller
 from typing import Optional
-from typing import Sequence
 
 
 def _replace_tabs(filename: str, tabsize: int) -> int:

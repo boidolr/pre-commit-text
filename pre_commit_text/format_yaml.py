@@ -2,11 +2,11 @@ import argparse
 import io
 import re
 import sys
+from collections.abc import Sequence
 from functools import partial
 from itertools import takewhile
 from sys import maxsize
 from typing import Optional
-from typing import Sequence
 
 from ruamel.yaml import YAML
 from ruamel.yaml.error import YAMLError
