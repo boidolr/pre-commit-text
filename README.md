@@ -8,7 +8,7 @@ Git hooks to modify (text) files for use with the [pre-commit](https://github.co
 Add this to your `.pre-commit-config.yaml`:
 ```
     -   repo: https://github.com/boidolr/pre-commit-text
-        rev: v1.2.1  # Use the ref you want to point at
+        rev: v1.2.2  # Use the ref you want to point at
         hooks:
         -   id: pretty-format-yaml
         -   id: replace-tabs
