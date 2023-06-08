@@ -9,7 +9,7 @@
 ---
 repos:
   - repo: https://github.com/boidolr/pre-commit-text
-    rev: v1.2.3
+    rev: v1.2.4
     hooks:
       - id: replace-tabs
         exclude: Makefile
@@ -40,7 +40,7 @@ repos:
       - id: black
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.0.270
+    rev: v0.0.272
     hooks:
       - id: ruff
         args: [--fix]
