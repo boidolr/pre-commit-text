@@ -21,7 +21,7 @@ classifiers = [
 
 requires-python = ">=3.9"
 dependencies = [
-    "ruamel.yaml==0.17.34",
+    "ruamel.yaml==0.17.35",
 ]
 
 [project.optional-dependencies]
