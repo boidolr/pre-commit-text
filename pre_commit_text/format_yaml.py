@@ -6,7 +6,6 @@ from collections.abc import Sequence
 from functools import partial
 from itertools import takewhile
 from sys import maxsize
-from typing import Optional
 
 from ruamel.yaml import YAML
 from ruamel.yaml.error import YAMLError
@@ -14,7 +13,7 @@ from ruamel.yaml.error import YAMLError
 
 def _format_yaml_doc(yaml: YAML, document: str) -> str:
     doc = yaml.load(document)
-    if isinstance(doc, (list, dict)):
+    if isinstance(doc, list | dict):
         output = io.StringIO()
         yaml.dump(doc, output)
         return output.getvalue()
@@ -50,7 +49,7 @@ def _format_yaml(yaml: YAML, filename: str) -> int:
     return 0
 
 
-def main(argv: Optional[Sequence[str]] = None) -> int:
+def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("filenames", nargs="*", help="Files to format")
     parser.add_argument(

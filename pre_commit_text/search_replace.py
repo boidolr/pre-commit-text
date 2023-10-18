@@ -4,7 +4,6 @@ import re
 import sys
 from collections.abc import Sequence
 from re import Pattern
-from typing import Optional
 
 
 def _search_replace(filename: str, pattern: Pattern[bytes], replacement: bytes) -> int:
@@ -27,7 +26,7 @@ def _search_replace(filename: str, pattern: Pattern[bytes], replacement: bytes) 
     return ret
 
 
-def main(argv: Optional[Sequence[str]] = None) -> int:
+def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("filenames", nargs="*", help="Files to search")
     parser.add_argument("-s", "--search", dest="pattern", help="Regular expression to use for search")

@@ -3,7 +3,6 @@ import argparse
 import sys
 from collections.abc import Sequence
 from operator import methodcaller
-from typing import Optional
 
 
 def _replace_tabs(filename: str, tabsize: int) -> int:
@@ -20,7 +19,7 @@ def _replace_tabs(filename: str, tabsize: int) -> int:
     return 0
 
 
-def main(argv: Optional[Sequence[str]] = None) -> int:
+def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("filenames", nargs="*", help="Files to replace tabs in")
     parser.add_argument(
