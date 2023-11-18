@@ -1,4 +1,8 @@
-pre-commit-text [![tag](https://img.shields.io/github/v/tag/boidolr/pre-commit-text?sort=semver)](https://github.com/boidolr/pre-commit-text/tags) [![Build](https://github.com/boidolr/pre-commit-text/actions/workflows/continous-integration.yml/badge.svg)](https://github.com/boidolr/pre-commit-text/actions/workflows/continous-integration.yml) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+pre-commit-text
+[![tag](https://img.shields.io/github/v/tag/boidolr/pre-commit-text?sort=semver)](https://github.com/boidolr/pre-commit-text/tags)
+![python](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fboidolr%2Fpre-commit-text%2Fmain%2Fpyproject.toml)
+[![Build](https://github.com/boidolr/pre-commit-text/actions/workflows/continous-integration.yml/badge.svg)](https://github.com/boidolr/pre-commit-text/actions/workflows/continous-integration.yml)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 ================
 
 Git hooks to modify (text) files for use with the [pre-commit](https://github.com/pre-commit/pre-commit) framework. For details see the list of available hooks below.
