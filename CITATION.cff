@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Boidol"
+  given-names: "Raphael"
+title: "pre-commit-text"
+abstract: >-
+  pre-commit-text will rewrite text or format files when checking changes in,
+  thereby ensuring content is as you want it to be.
+license: MIT
+license-url: "https://github.com/boidolr/pre-commit-text/blob/main/LICENSE"
+repository-code: "https://github.com/boidolr/pre-commit-text"
+url: "https://github.com/boidolr/pre-commit-text"
