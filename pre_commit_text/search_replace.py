@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import pathlib
 import re
 import sys
 from collections.abc import Sequence
@@ -7,7 +8,7 @@ from re import Pattern
 
 
 def _search_replace(filename: str, pattern: Pattern[bytes], replacement: bytes) -> int:
-    with open(filename, "rb") as fh:
+    with pathlib.Path(filename).open("rb") as fh:
         content = fh.readlines()
 
     ret = 0
@@ -20,7 +21,7 @@ def _search_replace(filename: str, pattern: Pattern[bytes], replacement: bytes) 
             ret = 1
 
     if ret != 0:
-        with open(filename, "wb") as fh:
+        with pathlib.Path(filename).open("wb") as fh:
             fh.writelines(content)
 
     return ret

@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 import argparse
+import pathlib
 import sys
 from collections.abc import Sequence
 from operator import methodcaller
 
 
 def _replace_tabs(filename: str, tabsize: int) -> int:
-    with open(filename, "rb") as fh:
+    with pathlib.Path(filename).open("rb") as fh:
         content = fh.readlines()
 
     lines = list(map(methodcaller("replace", b"\t", b" " * tabsize), content))
     if lines != content:
         print(f"fixed {filename}")
-        with open(filename, "wb") as fh:
+        with pathlib.Path(filename).open("wb") as fh:
             fh.writelines(lines)
         return 1
 
