@@ -4,10 +4,9 @@ import pathlib
 import re
 import sys
 from collections.abc import Sequence
-from re import Pattern
 
 
-def _search_replace(filename: str, pattern: Pattern[bytes], replacement: bytes) -> int:
+def _search_replace(filename: str, pattern: re.Pattern[bytes], replacement: bytes) -> int:
     with pathlib.Path(filename).open("rb") as fh:
         content = fh.readlines()
 
