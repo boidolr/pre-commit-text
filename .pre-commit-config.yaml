@@ -9,7 +9,7 @@
 ---
 repos:
   - repo: https://github.com/boidolr/pre-commit-text
-    rev: v1.2.15
+    rev: v1.2.16
     hooks:
       - id: replace-tabs
         exclude: Makefile
