@@ -5,7 +5,7 @@ def test_unchanged_without_match(tmp_path):
     path = tmp_path / "file"
     path.write_text("foo bar qux\nfirst second\n")
 
-    main((str(path),)) == 0
+    assert main((str(path),)) == 0
     assert path.read_text("utf-8") == "foo bar qux\nfirst second\n"
 
 
