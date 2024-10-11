@@ -21,6 +21,9 @@ jobs:
       matrix:
         python-version: ["3.10", "3.11", "3.12", "3.13"]
     runs-on: ubuntu-latest
+    env:
+      # renovate: datasource=pypi packageName=uv
+      UV_VERSION: "0.4.20"
 
     steps:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
@@ -28,6 +31,7 @@ jobs:
       - uses: astral-sh/setup-uv@c9aa747934b6867b18bf8f6624a8929c4f76147b # v3
         with:
           enable-cache: true
+          version: ${{ env.UV_VERSION }}
 
       - name: Install Python ${{ matrix.python-version }}
         run: uv python install ${{ matrix.python-version }}
