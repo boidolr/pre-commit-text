@@ -22,7 +22,7 @@ jobs:
         python-version: ["3.10", "3.11", "3.12", "3.13"]
     runs-on: ubuntu-latest
     env:
-      # renovate: datasource=github-releases depName=uv
+      # renovate: datasource=github-releases depName=astral-sh/uv
       UV_VERSION: "0.4.20"
 
     steps:
