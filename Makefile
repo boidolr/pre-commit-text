@@ -39,6 +39,12 @@ test: sync
 	uv run pytest -q
 
 
+## clean         : Remove virtual environment.
+.PHONY: clean
+clean:
+	rm -r .venv
+
+
 ## version       : Show which version is detected
 CURRENT:=$(subst v,,$(shell git describe --abbrev=0 --tags))
 PARTS:=$(subst ., ,$(CURRENT))
@@ -81,9 +87,3 @@ release-minor: release
 .PHONY: release-major
 release-major: NEXT_VERSION:=$$((${MAJOR}+1)).0.0
 release-major: release
-
-
-## clean         : Remove virtual environment.
-.PHONY: clean
-clean:
-       rm -r .venv

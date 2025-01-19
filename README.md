@@ -15,7 +15,7 @@ For details see below.
 Add this to your `.pre-commit-config.yaml`:
 ```
     -   repo: https://github.com/boidolr/pre-commit-text
-        rev: v1.2.17  # Use the ref you want to point at
+        rev: v1.2.18  # Use the ref you want to point at
         hooks:
         -   id: pretty-format-yaml
         -   id: replace-tabs
