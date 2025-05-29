@@ -29,7 +29,7 @@ def _format_yaml(yaml: YAML, filename: str) -> int:
 
     head = "".join(takewhile(is_comment, lines))
     content = "".join(lines)
-    content = content if not content.startswith(head) else content[len(head) :]
+    content = content.removeprefix(head)
 
     docs = re.split(r"^---\s*\n", content, flags=re.MULTILINE)
     processed_docs = list(filter(None, map(partial(_format_yaml_doc, yaml), docs)))
