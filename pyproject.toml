@@ -24,6 +24,14 @@ dependencies = ["ruamel.yaml==0.18.10"]
 dev = ["pre-commit", "ruff", "tox", "tox-uv"]
 tests = ["pytest", "pytest-clarity", "pytest-ruff", "pytest-ty"]
 
+[tool.uv.sources]
+pytest-ty = { index = "test" }
+
+[[tool.uv.index]]
+name = "test"
+url = "https://test.pypi.org/simple/"
+explicit = true
+
 [project.scripts]
 format-yaml = "pre_commit_text.format_yaml:main"
 search-replace = "pre_commit_text.search_replace:main"
