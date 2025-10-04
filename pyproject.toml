@@ -79,7 +79,7 @@ core = "sysmon"
 
 [tool.tox]
 requires = ["tox>=4.19", "tox-uv>=1.19.1"]
-envlist = ["py310", "py311", "py312", "py313", "py314", "pre-commit", "static"]
+envlist = ["py310", "py311", "py312", "py313", "py314", "py314t", "pre-commit", "static"]
 isolated_build = true
 
 [tool.tox.env_run_base]
