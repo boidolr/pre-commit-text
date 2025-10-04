@@ -86,7 +86,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         offset=args.mapping if args.offset is None else args.offset,
     )
     yaml.preserve_quotes = args.preserve_quotes
-    yaml.width = sys.maxsize  # type: ignore
+    yaml.width = sys.maxsize
 
     ret = 0
     for filename in args.filenames:
