@@ -18,13 +18,13 @@ help: Makefile
 ## upgrade       : Update pre-commit configuration.
 .PHONY: upgrade
 upgrade: sync
-	uv run pre-commit autoupdate
+	uvx pre-commit autoupdate
 
 
 ## check         : Execute pre-commit hooks.
 .PHONY: check
 check: sync
-	uv run pre-commit run --all-files
+	uvx pre-commit run --all-files
 
 
 ## format        : Format code.
@@ -36,7 +36,7 @@ format: sync
 ## test          : Execute tests.
 .PHONY: test
 test: sync
-	uv run pytest -q
+	uv run tox -e py
 
 
 ## clean         : Remove virtual environment.
