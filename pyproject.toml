@@ -18,7 +18,7 @@ classifiers = [
 ]
 
 requires-python = ">=3.10,<4"
-dependencies = ["ruamel.yaml==0.18.16"]
+dependencies = ["ruamel.yaml==0.19.1"]
 
 [dependency-groups]
 dev = ["ruff", "ty", "tox", "tox-uv"]
