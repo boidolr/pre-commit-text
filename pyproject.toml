@@ -38,7 +38,7 @@ fix = true
 
 [tool.ruff.lint]
 select = ["ALL"]
-extend-ignore = ["D", "T201"]
+extend-ignore = ["D", "T201", "CPY001"]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*.py" = ["S101"]
