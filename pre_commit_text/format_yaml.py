@@ -92,7 +92,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     for filename in args.filenames:
         try:
             ret |= _format_yaml(yaml, filename)
-        except YAMLError:  # noqa: PERF203
+        except YAMLError:
             ret = 1
             print(f"{filename} could not be parsed")
     return ret
